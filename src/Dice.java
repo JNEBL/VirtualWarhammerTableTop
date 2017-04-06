@@ -26,4 +26,8 @@ public class Dice {
         double number = Math.random() * 20 + 1;
         return (int)(number);
     }
+    public static int d100(){
+        double number = Math.random() * 100 + 1;
+        return (int)(number);
+    }
 }
