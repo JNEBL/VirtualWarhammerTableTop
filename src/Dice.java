@@ -2,6 +2,10 @@
  * Created by student5 on 4/6/17.
  */
 public class Dice {
+    public static int d3(){
+        double number = Math.random() * 3 + 1;
+        return (int)(number);
+    }
     public static int d4(){
         double number = Math.random() * 4 + 1;
         return (int)(number);
