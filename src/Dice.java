@@ -34,4 +34,8 @@ public class Dice {
         double number = Math.random() * 100 + 1;
         return (int)(number);
     }
+    public static int scatterDice(){
+        double number = Math.random() * 360;
+        return (int)(number);
+    }
 }
