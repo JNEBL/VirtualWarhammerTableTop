@@ -7,8 +7,8 @@ import BaseArea.Model;
  */
 public class DarkEldarModel extends Model{
     public boolean combatDrug = false,powerFromPain = false;
-    public DarkEldarModel(int WS, int BS, int S, int T, int W, int I, int A, int LD, int SV, String name){
-        super(WS,BS,S,T,W,I,A,LD,SV,name);
+    public DarkEldarModel(int WS,int BS,int S,int T,int W,int I,int A,int LD,int SV,String name, String description,int points){
+        super(WS,BS,S,T,W,I,A,LD,SV,name,description,points);
         setFaction("Dark Eldar");
     }
 

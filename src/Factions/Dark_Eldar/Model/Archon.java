@@ -8,8 +8,8 @@ import Factions.Dark_Eldar.Base.DarkEldarModel;
 public class Archon extends DarkEldarModel {
 
     public Archon(){
-        super(7,7,3,3,3,7,4,10,5,"Archon");
-        setDescription("The Archons are the masters of the Dark Eldar Kabals. Regal and monstrous in equal\n" +
+        super(7,7,3,3,3,7,4,10,5,"Archon","The Archons are the " +
+                "masters of the Dark Eldar Kabals. Regal and monstrous in equal\n" +
                 "measure, each wields the power to enslave worlds and destroy civilisations. Their might\n" +
                 "has not been easily won – to rise to the lofty pinnacles of power in Commorragh requires\n" +
                 "indisputable warrior skill, a lethal aptitude for politicking, and a will of unbreakable\n" +
@@ -23,13 +23,12 @@ public class Archon extends DarkEldarModel {
                 "many others that it takes a true atrocity to invigorate them. They must lead ever more\n" +
                 "raids against realspace, for only the bounty of horror and pain offered by all-out war is\n" +
                 "enough to slake their thirst. In battle they move like the wind, wreathed in the foul\n" +
-                "powers of dark science and armed with the Dark City’s deadliest techno-arcana.");
+                "powers of dark science and armed with the Dark City’s deadliest techno-arcana.",60);
         setInfantry(true);
         setCharacters(true);
         setFleet(true);
         setIndependentCharacter(true);
         setNightVision(true);
         setPowerFromPain(true);
-        setPoints(60);
     }
 }

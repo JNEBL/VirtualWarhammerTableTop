@@ -10,8 +10,9 @@ public class SpecialRule {
             slowAndPurposeful = false,splitFire = false,stealth = false, strikeDown = false,stubborn = false,
             swarms = false,tankHunters = false,vectorDancer = false,vortex = false,zealot = false;
     private String name,faction,description;
-    public SpecialRule(String name){
+    public SpecialRule(String name,String description){
         setName(name);
+        setDescription(description);
     }
     public String getDescription() {
         return description;
@@ -41,10 +42,18 @@ public class SpecialRule {
         this.fleet = fleet;
     }
 
+    public boolean isFear() {
+        return fear;
+    }
+    public void setFear(boolean fear) {
+        this.fear = fear;
+    }
+
     public boolean isNightVision() {
         return nightVision;
     }
     public void setNightVision(boolean nightVision) {
         this.nightVision = nightVision;
     }
+
 }

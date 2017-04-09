@@ -14,8 +14,8 @@ public class Model extends SpecialRule{
     private boolean characters = false,infantry = false,bikesAndJetBikes = false,artillery = false,jumpUnits = false,
             jetPackUnits = false,beasts = false,cavalry = false,monstrousCreatures = false,
             flyingMonstrousCreatures = false,gargantuan = false,flyingGargantuanCreature = false;
-    public Model(int WS,int BS,int S,int T,int W,int I,int A,int LD,int SV,String name){
-        super(name);
+    public Model(int WS,int BS,int S,int T,int W,int I,int A,int LD,int SV,String name,String description,int points){
+        super(name,description);
         setWeaponSkill(WS);
         setBallisticSkill(BS);
         setStrength(S);
@@ -25,6 +25,7 @@ public class Model extends SpecialRule{
         setAttack(A);
         setLeadership(LD);
         setArmourSave(SV);
+        setPoints(points);
     }
 
     public int getArmourSave() {
@@ -246,6 +247,19 @@ public class Model extends SpecialRule{
         this.independentCharacter = independentCharacter;
     }
 
+    public boolean isFuriousCharge() {
+        return furiousCharge;
+    }
+    public void setFuriousCharge(boolean furiousCharge) {
+        this.furiousCharge = furiousCharge;
+    }
+
+    public boolean isFeelNoPain() {
+        return feelNoPain;
+    }
+    public void setFeelNoPain(boolean feelNoPain) {
+        this.feelNoPain = feelNoPain;
+    }
 
     public boolean isCharacters() {
         return characters;
