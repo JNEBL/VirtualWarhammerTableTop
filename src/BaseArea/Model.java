@@ -6,7 +6,7 @@ package BaseArea;
 public class Model {
     private int weaponSkill,ballisticSkill,strength,toughness,wound,initiative,attack,leadership,armourSave,points;
     private String name,faction,description;
-    public Model(int WS,int BS,int S,int T,int W,int I,int A,int LD,int SV,String name,String faction){
+    public Model(int WS,int BS,int S,int T,int W,int I,int A,int LD,int SV,String name){
         setWeaponSkill(WS);
         setBallisticSkill(BS);
         setStrength(S);
@@ -17,7 +17,6 @@ public class Model {
         setLeadership(LD);
         setArmourSave(SV);
         setName(name);
-        setFaction(faction);
     }
 
     public int getArmourSave() {
@@ -231,6 +230,7 @@ public class Model {
         setWound((int)(this.wound + wound));
     }
 
+
     public String getDescription() {
         return description;
     }
@@ -254,8 +254,9 @@ public class Model {
 
     @Override
     public String toString() {
-        return name + "\nWS  BS  S  T  W  I  A  LD  SV" + "\n" + getWeaponSkill() + "   " + getBallisticSkill()+"   " +
-                getStrength() + "  " + getToughness() + "  " + getWound() + "  " + getInitiative() + "  " +
-                getAttack() + "   " + getLeadership() + "   " + getArmourSave() + "\n" + getDescription();
+        return getFaction()+ " "+ getName() + "\nWS  BS  S  T  W  I  A  LD  SV" + "\n" + getWeaponSkill() + "   " +
+                getBallisticSkill()+"   " + getStrength() + "  " + getToughness() + "  " + getWound() + "  " +
+                getInitiative() + "  " + getAttack() + "   " + getLeadership() + "   " +
+                getArmourSave() + "\n" + getDescription();
     }
 }
