@@ -1,10 +1,12 @@
+package BaseArea;
+
 /**
  * Created by jnebl on 4/6/2017.
  */
 public class Model {
-    private int weaponSkill,ballisticSkill,strength,toughness,wound,initiative,attack,leadership,armourSave;
-    private String name;
-    Model(int WS,int BS,int S,int T,int W,int I,int A,int LD,int SV,String name){
+    private int weaponSkill,ballisticSkill,strength,toughness,wound,initiative,attack,leadership,armourSave,points;
+    private String name,faction;
+    public Model(int WS,int BS,int S,int T,int W,int I,int A,int LD,int SV,String name,String faction){
         setWeaponSkill(WS);
         setBallisticSkill(BS);
         setStrength(S);
@@ -15,6 +17,7 @@ public class Model {
         setLeadership(LD);
         setArmourSave(SV);
         setName(name);
+        setFaction(faction);
     }
 
     public int getArmourSave() {
@@ -124,6 +127,22 @@ public class Model {
         setLeadership((int)(this.leadership * leadership));
     }
 
+    public int getPoints() {
+        return points;
+    }
+    public void setPoints(int points) {
+        if (points >= 0)
+            this.points = points;
+        else
+            this.points = 0;
+    }
+    public void incrementAddPoints(int points){
+        setPoints(this.points + points);
+    }
+    public void incrementSubtractPoints(int points){
+        setPoints(this.points - points);
+    }
+
     public int getStrength() {
         return strength;
     }
@@ -217,6 +236,13 @@ public class Model {
     }
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getFaction() {
+        return faction;
+    }
+    public void setFaction(String faction) {
+        this.faction = faction;
     }
 
     @Override

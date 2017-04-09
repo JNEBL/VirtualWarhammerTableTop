@@ -1,3 +1,7 @@
+package Formations;
+
+import BaseArea.Model;
+
 import java.util.ArrayList;
 
 /**

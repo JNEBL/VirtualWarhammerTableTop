@@ -1,3 +1,5 @@
+import BaseArea.Model;
+
 /**
  * Created by jnebl on 4/6/2017.
  */
