@@ -10,6 +10,6 @@ public class Weapon extends SpecialRule{
             masterCrafted = false,oneUseOnlyOneShotOnly = false,pinning = false,poisoned = false,rending = false,
             skyFire = false,smash = false,sniper = false,soulBlaze = false,specialistWeapon = false,melta = false;
     public Weapon(){
-        super("");
+        super("","");
     }
 }

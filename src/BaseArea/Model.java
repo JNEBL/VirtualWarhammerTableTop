@@ -10,10 +10,11 @@ public class Model extends SpecialRule{
             crusader = false,daemon = false,eternalWarrior = false,fearLess = false,feelNoPain = false,
             furiousCharge = false,hammerOfWrath = false,hatred = false,jink = false, monsterHunter = false,
             moveThroughCover = false,precisionShots = false, precisionStrikes = false, preferredEnemy = false,
-            rage = false,rampage = false,relentless,independentCharacter = false;
+            rage = false,rampage = false,relentless,independentCharacter = false,dodge = false;
     private boolean characters = false,infantry = false,bikesAndJetBikes = false,artillery = false,jumpUnits = false,
             jetPackUnits = false,beasts = false,cavalry = false,monstrousCreatures = false,
             flyingMonstrousCreatures = false,gargantuan = false,flyingGargantuanCreature = false;
+    private boolean hq = false,troops = false,elites = false,fastAttack = false,heavySupport = false;
     public Model(int WS,int BS,int S,int T,int W,int I,int A,int LD,int SV,String name,String description,int points){
         super(name,description);
         setWeaponSkill(WS);
@@ -261,6 +262,13 @@ public class Model extends SpecialRule{
         this.feelNoPain = feelNoPain;
     }
 
+    public boolean isDodge() {
+        return dodge;
+    }
+    public void setDodge(boolean dodge) {
+        this.dodge = dodge;
+    }
+
     public boolean isCharacters() {
         return characters;
     }
@@ -273,6 +281,27 @@ public class Model extends SpecialRule{
     }
     public void setInfantry(boolean infantry) {
         this.infantry = infantry;
+    }
+
+    public boolean isHq() {
+        return hq;
+    }
+    public void setHq(boolean hq) {
+        this.hq = hq;
+    }
+
+    public boolean isElites() {
+        return elites;
+    }
+    public void setElites(boolean elites) {
+        this.elites = elites;
+    }
+
+    public boolean isTroops() {
+        return troops;
+    }
+    public void setTroops(boolean troops) {
+        this.troops = troops;
     }
 
     @Override

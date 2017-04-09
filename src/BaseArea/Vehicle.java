@@ -11,14 +11,15 @@ public class Vehicle extends SpecialRule {
             ,skimmer = false,tank = false,transport = false,walker = false,
             superHeavyWalker = false,superHeavyFlyer = false;
     private boolean assaultVehicle = false,powerOfTheMachineSpirit = false,psychicPilot = false,strafingRun = false,
-            supersonic = false;
-    public Vehicle(int BS,int AF,int AS,int AR,int HP,String name){
-        super(name);
+            supersonic = false,vehicle = true;
+    public Vehicle(int BS,int AF,int AS,int AR,int HP,String name,String description,int points){
+        super(name,description);
         setBallisticSkill(BS);
         setArmourValueFront(AF);
         setArmourValueSides(AS);
         setArmourValueRear(AR);
         setHullPoints(HP);
+        setPoints(points);
     }
 
     public int getBallisticSkill() {

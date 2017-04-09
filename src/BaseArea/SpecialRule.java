@@ -56,4 +56,10 @@ public class SpecialRule {
         this.nightVision = nightVision;
     }
 
+    public boolean isDeepStrike() {
+        return deepStrike;
+    }
+    public void setDeepStrike(boolean deepStrike) {
+        this.deepStrike = deepStrike;
+    }
 }

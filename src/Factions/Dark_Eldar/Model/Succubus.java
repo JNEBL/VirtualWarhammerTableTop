@@ -24,6 +24,7 @@ public class Succubus extends DarkEldarModel {
                 "skill. They regularly take the lead in realspace raids, not only for the feast of pain but\n" +
                 "also to hunt the champions of lesser races and defeat them in showy displays of their\n" +
                 "sheer skill.",75);
+        setHq(true);
         setInfantry(true);
         setCharacters(true);
         setCombatDrug(true);

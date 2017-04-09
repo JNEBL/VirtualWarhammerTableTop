@@ -23,6 +23,7 @@ public class Haemonculus extends DarkEldarModel {
                 "extreme and terrible wargear, able to cause uncontrollable growth with a single touch or\n" +
                 "turn their foes to glass in an instant. A Haemonculus drifts across the field of battle with\n" +
                 "a macabre elegance, gifting those too slow to escape with an unimaginably painful death.",70);
+        setHq(true);
         setInfantry(true);
         setCharacters(true);
         setFeelNoPain(true);
