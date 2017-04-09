@@ -8,9 +8,12 @@ public class Model extends SpecialRule{
     private boolean acuteSenses = false,adamantiumWill = false,andTheyShallKnowNoFear = false,
             brotherHoodOfPsykersSorcerers = false,veryBulky = false,extremelyBulky = false,counterAttack = false,
             crusader = false,daemon = false,eternalWarrior = false,fearLess = false,feelNoPain = false,
-            furiousCharge = false,hammerOfWrath = false,hatred = false,independentCharacter = false,jink = false,
-            monsterHunter = false,moveThroughCover = false,precisionShots = false, precisionStrikes = false,
-            preferredEnemy = false,rage = false,rampage = false,relentless;
+            furiousCharge = false,hammerOfWrath = false,hatred = false,jink = false, monsterHunter = false,
+            moveThroughCover = false,precisionShots = false, precisionStrikes = false, preferredEnemy = false,
+            rage = false,rampage = false,relentless,independentCharacter = false;
+    private boolean characters = false,infantry = false,bikesAndJetBikes = false,artillery = false,jumpUnits = false,
+            jetPackUnits = false,beasts = false,cavalry = false,monstrousCreatures = false,
+            flyingMonstrousCreatures = false,gargantuan = false,flyingGargantuanCreature = false;
     public Model(int WS,int BS,int S,int T,int W,int I,int A,int LD,int SV,String name){
         super(name);
         setWeaponSkill(WS);
@@ -235,6 +238,28 @@ public class Model extends SpecialRule{
         setWound((int)(this.wound + wound));
     }
 
+
+    public boolean isIndependentCharacter() {
+        return independentCharacter;
+    }
+    public void setIndependentCharacter(boolean independentCharacter) {
+        this.independentCharacter = independentCharacter;
+    }
+
+
+    public boolean isCharacters() {
+        return characters;
+    }
+    public void setCharacters(boolean characters) {
+        this.characters = characters;
+    }
+
+    public boolean isInfantry() {
+        return infantry;
+    }
+    public void setInfantry(boolean infantry) {
+        this.infantry = infantry;
+    }
 
     @Override
     public String toString() {

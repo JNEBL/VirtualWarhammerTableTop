@@ -24,6 +24,12 @@ public class Archon extends DarkEldarModel {
                 "raids against realspace, for only the bounty of horror and pain offered by all-out war is\n" +
                 "enough to slake their thirst. In battle they move like the wind, wreathed in the foul\n" +
                 "powers of dark science and armed with the Dark City’s deadliest techno-arcana.");
+        setInfantry(true);
+        setCharacters(true);
+        setFleet(true);
+        setIndependentCharacter(true);
+        setNightVision(true);
+        setPowerFromPain(true);
         setPoints(60);
     }
 }

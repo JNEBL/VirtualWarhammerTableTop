@@ -33,4 +33,18 @@ public class SpecialRule {
     public void setFaction(String faction) {
         this.faction = faction;
     }
+
+    public boolean isFleet() {
+        return fleet;
+    }
+    public void setFleet(boolean fleet) {
+        this.fleet = fleet;
+    }
+
+    public boolean isNightVision() {
+        return nightVision;
+    }
+    public void setNightVision(boolean nightVision) {
+        this.nightVision = nightVision;
+    }
 }
