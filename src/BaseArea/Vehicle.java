@@ -10,6 +10,8 @@ public class Vehicle extends SpecialRule {
     private boolean chariot = false,fast = false,flyer = false,heavy = false,hover = false,openTopped = false
             ,skimmer = false,tank = false,transport = false,walker = false,
             superHeavyWalker = false,superHeavyFlyer = false;
+    private boolean assaultVehicle = false,powerOfTheMachineSpirit = false,psychicPilot = false,strafingRun = false,
+            supersonic = false;
     public Vehicle(int BS,int AF,int AS,int AR,int HP,String name){
         super(name);
         setBallisticSkill(BS);

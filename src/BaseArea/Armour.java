@@ -5,4 +5,7 @@ package BaseArea;
  */
 public class Armour extends SpecialRule{
 
+    public Armour(){
+        super("");
+    }
 }

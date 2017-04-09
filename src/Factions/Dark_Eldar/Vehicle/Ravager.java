@@ -1,4 +1,6 @@
-package Factions.Dark_Eldar;
+package Factions.Dark_Eldar.Vehicle;
+
+import Factions.Dark_Eldar.Base.DarkEldarVehicle;
 
 /**
  * Created by jnebl on 4/9/2017.

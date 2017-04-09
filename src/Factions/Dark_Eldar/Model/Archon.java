@@ -1,4 +1,6 @@
-package Factions.Dark_Eldar;
+package Factions.Dark_Eldar.Model;
+
+import Factions.Dark_Eldar.Base.DarkEldarModel;
 
 /**
  * Created by jnebl on 4/9/2017.

@@ -5,6 +5,12 @@ package BaseArea;
  */
 public class Model extends SpecialRule{
     private int weaponSkill,ballisticSkill,strength,toughness,wound,initiative,attack,leadership,armourSave,points;
+    private boolean acuteSenses = false,adamantiumWill = false,andTheyShallKnowNoFear = false,
+            brotherHoodOfPsykersSorcerers = false,veryBulky = false,extremelyBulky = false,counterAttack = false,
+            crusader = false,daemon = false,eternalWarrior = false,fearLess = false,feelNoPain = false,
+            furiousCharge = false,hammerOfWrath = false,hatred = false,independentCharacter = false,jink = false,
+            monsterHunter = false,moveThroughCover = false,precisionShots = false, precisionStrikes = false,
+            preferredEnemy = false,rage = false,rampage = false,relentless;
     public Model(int WS,int BS,int S,int T,int W,int I,int A,int LD,int SV,String name){
         super(name);
         setWeaponSkill(WS);
