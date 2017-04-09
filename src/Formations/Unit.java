@@ -1,6 +1,7 @@
 package Formations;
 
 import BaseArea.Model;
+import BaseArea.Vehicle;
 
 import java.util.ArrayList;
 
@@ -9,4 +10,5 @@ import java.util.ArrayList;
  */
 public class Unit {
     ArrayList<Model> models = new ArrayList<>();
+    ArrayList<Vehicle> vehicles = new ArrayList<>();
 }

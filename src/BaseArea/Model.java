@@ -3,10 +3,10 @@ package BaseArea;
 /**
  * Created by jnebl on 4/6/2017.
  */
-public class Model {
+public class Model extends SpecialRule{
     private int weaponSkill,ballisticSkill,strength,toughness,wound,initiative,attack,leadership,armourSave,points;
-    private String name,faction,description;
     public Model(int WS,int BS,int S,int T,int W,int I,int A,int LD,int SV,String name){
+        super(name);
         setWeaponSkill(WS);
         setBallisticSkill(BS);
         setStrength(S);
@@ -16,7 +16,6 @@ public class Model {
         setAttack(A);
         setLeadership(LD);
         setArmourSave(SV);
-        setName(name);
     }
 
     public int getArmourSave() {
@@ -230,27 +229,6 @@ public class Model {
         setWound((int)(this.wound + wound));
     }
 
-
-    public String getDescription() {
-        return description;
-    }
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public String getName() {
-        return name;
-    }
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getFaction() {
-        return faction;
-    }
-    public void setFaction(String faction) {
-        this.faction = faction;
-    }
 
     @Override
     public String toString() {

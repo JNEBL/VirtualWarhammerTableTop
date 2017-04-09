@@ -5,19 +5,18 @@ import org.omg.CORBA.PUBLIC_MEMBER;
 /**
  * Created by jnebl on 4/9/2017.
  */
-public class Vehicle {
+public class Vehicle extends SpecialRule {
     private int ballisticSkill,armourValueFront,armourValueSides,armourValueRear,hullPoints,points;
     private boolean chariot = false,fast = false,flyer = false,heavy = false,hover = false,openTopped = false
             ,skimmer = false,tank = false,transport = false,walker = false,
             superHeavyWalker = false,superHeavyFlyer = false;
-    private String name,faction,description;
     public Vehicle(int BS,int AF,int AS,int AR,int HP,String name){
+        super(name);
         setBallisticSkill(BS);
         setArmourValueFront(AF);
         setArmourValueSides(AS);
         setArmourValueRear(AR);
         setHullPoints(HP);
-        setName(name);
     }
 
     public int getBallisticSkill() {
@@ -112,6 +111,7 @@ public class Vehicle {
         setPoints((int)(this.points * points));
     }
 
+
     public boolean isChariot() {
         return chariot;
     }
@@ -197,24 +197,10 @@ public class Vehicle {
     }
 
 
-    public String getDescription() {
-        return description;
-    }
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public String getName() {
-        return name;
-    }
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getFaction() {
-        return faction;
-    }
-    public void setFaction(String faction) {
-        this.faction = faction;
+    @Override
+    public String toString() {
+        return getFaction() + " " + getName() + "\nBS AF AS AR HP\n" + getBallisticSkill() + "  " +
+                getArmourValueFront() + " " + getArmourValueSides() + " " + getArmourValueRear() + " " +
+                getHullPoints() + "\n" + getDescription();
     }
 }

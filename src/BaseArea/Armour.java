@@ -3,6 +3,6 @@ package BaseArea;
 /**
  * Created by jnebl on 4/9/2017.
  */
-public class Weapon extends SpecialRule{
+public class Armour extends SpecialRule{
 
 }

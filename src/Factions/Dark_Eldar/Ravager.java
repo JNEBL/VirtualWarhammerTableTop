@@ -17,5 +17,8 @@ public class Ravager extends DarkEldarVehicle {
                 "reduced to smouldering wreckage without the cost of a single Dark Eldar life, the dazed\n" +
                 "survivors left defenceless as the rest of the raiding party descends.");
         setPoints(110);
+        setSkimmer(true);
+        setOpenTopped(true);
+        setFast(true);
     }
 }
