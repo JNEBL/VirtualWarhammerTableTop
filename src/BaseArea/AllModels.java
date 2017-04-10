@@ -4,11 +4,33 @@ package BaseArea;
  * Created by jnebl on 4/9/2017.
  */
 public class AllModels extends SpecialRule {
+    private int points;
     private boolean deepStrike = false,fear = false,fleet = false,nightVision = false;
     private boolean hq = false,troops = false,elites = false,fastAttack = false,heavySupport = false;
-    public AllModels(String name,String description){
+    public AllModels(String name,String description,int points){
         super(name,description);
+        setPoints(points);
     }
+
+    public int getPoints() {
+        return points;
+    }
+    public void setPoints(int points) {
+        if (points >= 0 )
+            this.points = points;
+        else
+            this.points = 0;
+    }
+    public void incrementAddPoints(int points){
+        setPoints(this.points + points);
+    }
+    public void incrementSubtractPoints(int points){
+        setPoints(this.points - points);
+    }
+    public void incrementMultiplePoints(int points){
+        setPoints((int)(this.points * points));
+    }
+
     public boolean isFleet() {
         return fleet;
     }
@@ -63,5 +85,12 @@ public class AllModels extends SpecialRule {
     }
     public void setFastAttack(boolean fastAttack) {
         this.fastAttack = fastAttack;
+    }
+
+    public boolean isHeavySupport() {
+        return heavySupport;
+    }
+    public void setHeavySupport(boolean heavySupport) {
+        this.heavySupport = heavySupport;
     }
 }

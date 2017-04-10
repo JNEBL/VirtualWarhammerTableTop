@@ -6,20 +6,19 @@ import org.omg.CORBA.PUBLIC_MEMBER;
  * Created by jnebl on 4/9/2017.
  */
 public class Vehicle extends AllModels {
-    private int ballisticSkill,armourValueFront,armourValueSides,armourValueRear,hullPoints,points;
+    private int ballisticSkill,armourValueFront,armourValueSides,armourValueRear,hullPoints;
     private boolean chariot = false,fast = false,flyer = false,heavy = false,hover = false,openTopped = false
             ,skimmer = false,tank = false,transport = false,walker = false,
             superHeavyWalker = false,superHeavyFlyer = false;
     private boolean assaultVehicle = false,powerOfTheMachineSpirit = false,psychicPilot = false,strafingRun = false,
             supersonic = false,vehicle = true;
     public Vehicle(int BS,int AF,int AS,int AR,int HP,String name,String description,int points){
-        super(name,description);
+        super(name,description,points);
         setBallisticSkill(BS);
         setArmourValueFront(AF);
         setArmourValueSides(AS);
         setArmourValueRear(AR);
         setHullPoints(HP);
-        setPoints(points);
     }
 
     public int getBallisticSkill() {
@@ -93,25 +92,6 @@ public class Vehicle extends AllModels {
     }
     public void incrementMultipleHullPoints(int hullPoints){
         setHullPoints((int)(this.hullPoints * hullPoints));
-    }
-
-    public int getPoints() {
-        return points;
-    }
-    public void setPoints(int points) {
-        if (points >= 0 )
-            this.points = points;
-        else
-            this.points = 0;
-    }
-    public void incrementAddPoints(int points){
-        setPoints(this.points + points);
-    }
-    public void incrementSubtractPoints(int points){
-        setPoints(this.points - points);
-    }
-    public void incrementMultiplePoints(int points){
-        setPoints((int)(this.points * points));
     }
 
 
@@ -199,6 +179,12 @@ public class Vehicle extends AllModels {
         this.walker = walker;
     }
 
+    public boolean isSupersonic() {
+        return supersonic;
+    }
+    public void setSupersonic(boolean supersonic) {
+        this.supersonic = supersonic;
+    }
 
     @Override
     public String toString() {

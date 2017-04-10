@@ -4,15 +4,15 @@ package BaseArea;
  * Created by jnebl on 4/6/2017.
  */
 public class Model extends AllModels{
-    private int weaponSkill,ballisticSkill,strength,toughness,wound,initiative,attack,leadership,armourSave,points;
+    private int weaponSkill,ballisticSkill,strength,toughness,wound,initiative,attack,leadership,armourSave;
     private boolean feelNoPain = false,furiousCharge = false,rampage = false,independentCharacter = false,dodge = false,
             infiltrate = false,moveThroughCover = false,shrouded = false,stealth = false,bulky = false,daemon = false,
-            rending = false,swarms = false,rage = false;
+            rending = false,swarms = false,rage = false,hitAndRun = false,skilledRider,fearless = false;
     private boolean characters = false,infantry = false,bikesAndJetBikes = false,artillery = false,jumpUnits = false,
             jetPackUnits = false,beasts = false,cavalry = false,monstrousCreatures = false,eldarJetBikes = false,
             flyingMonstrousCreatures = false,gargantuan = false,flyingGargantuanCreature = false;
     public Model(int WS,int BS,int S,int T,int W,int I,int A,int LD,int SV,String name,String description,int points){
-        super(name,description);
+        super(name,description,points);
         setWeaponSkill(WS);
         setBallisticSkill(BS);
         setStrength(S);
@@ -22,7 +22,6 @@ public class Model extends AllModels{
         setAttack(A);
         setLeadership(LD);
         setArmourSave(SV);
-        setPoints(points);
     }
 
     public int getArmourSave() {
@@ -130,22 +129,6 @@ public class Model extends AllModels{
     }
     public void incrementMultipleLeadership(int leadership){
         setLeadership((int)(this.leadership * leadership));
-    }
-
-    public int getPoints() {
-        return points;
-    }
-    public void setPoints(int points) {
-        if (points >= 0)
-            this.points = points;
-        else
-            this.points = 0;
-    }
-    public void incrementAddPoints(int points){
-        setPoints(this.points + points);
-    }
-    public void incrementSubtractPoints(int points){
-        setPoints(this.points - points);
     }
 
     public int getStrength() {
@@ -335,6 +318,27 @@ public class Model extends AllModels{
         this.rage = rage;
     }
 
+    public boolean isHitAndRun() {
+        return hitAndRun;
+    }
+    public void setHitAndRun(boolean hitAndRun) {
+        this.hitAndRun = hitAndRun;
+    }
+
+    public boolean isSkilledRider() {
+        return skilledRider;
+    }
+    public void setSkilledRider(boolean skilledRider) {
+        this.skilledRider = skilledRider;
+    }
+
+    public boolean isFearless() {
+        return fearless;
+    }
+    public void setFearless(boolean fearless) {
+        this.fearless = fearless;
+    }
+
     public boolean isCharacters() {
         return characters;
     }
@@ -361,6 +365,20 @@ public class Model extends AllModels{
     }
     public void setEldarJetBikes(boolean eldarJetBikes) {
         this.eldarJetBikes = eldarJetBikes;
+    }
+
+    public boolean isJumpUnits() {
+        return jumpUnits;
+    }
+    public void setJumpUnits(boolean jumpUnits) {
+        this.jumpUnits = jumpUnits;
+    }
+
+    public boolean isMonstrousCreatures() {
+        return monstrousCreatures;
+    }
+    public void setMonstrousCreatures(boolean monstrousCreatures) {
+        this.monstrousCreatures = monstrousCreatures;
     }
 
     @Override
