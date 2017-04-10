@@ -3,18 +3,14 @@ package BaseArea;
 /**
  * Created by jnebl on 4/6/2017.
  */
-public class Model extends SpecialRule{
+public class Model extends AllModels{
     private int weaponSkill,ballisticSkill,strength,toughness,wound,initiative,attack,leadership,armourSave,points;
-    private boolean acuteSenses = false,adamantiumWill = false,andTheyShallKnowNoFear = false,
-            brotherHoodOfPsykersSorcerers = false,veryBulky = false,extremelyBulky = false,counterAttack = false,
-            crusader = false,daemon = false,eternalWarrior = false,fearLess = false,feelNoPain = false,
-            furiousCharge = false,hammerOfWrath = false,hatred = false,jink = false, monsterHunter = false,
-            moveThroughCover = false,precisionShots = false, precisionStrikes = false, preferredEnemy = false,
-            rage = false,rampage = false,relentless,independentCharacter = false,dodge = false;
+    private boolean feelNoPain = false,furiousCharge = false,rampage = false,independentCharacter = false,dodge = false,
+            infiltrate = false,moveThroughCover = false,shrouded = false,stealth = false,bulky = false,daemon = false,
+            rending = false,swarms = false,rage = false;
     private boolean characters = false,infantry = false,bikesAndJetBikes = false,artillery = false,jumpUnits = false,
-            jetPackUnits = false,beasts = false,cavalry = false,monstrousCreatures = false,
+            jetPackUnits = false,beasts = false,cavalry = false,monstrousCreatures = false,eldarJetBikes = false,
             flyingMonstrousCreatures = false,gargantuan = false,flyingGargantuanCreature = false;
-    private boolean hq = false,troops = false,elites = false,fastAttack = false,heavySupport = false;
     public Model(int WS,int BS,int S,int T,int W,int I,int A,int LD,int SV,String name,String description,int points){
         super(name,description);
         setWeaponSkill(WS);
@@ -269,6 +265,76 @@ public class Model extends SpecialRule{
         this.dodge = dodge;
     }
 
+    public boolean isRampage() {
+        return rampage;
+    }
+    public void setRampage(boolean rampage) {
+        this.rampage = rampage;
+    }
+
+    public boolean isInfiltrate() {
+        return infiltrate;
+    }
+    public void setInfiltrate(boolean infiltrate) {
+        this.infiltrate = infiltrate;
+    }
+
+    public boolean isMoveThroughCover() {
+        return moveThroughCover;
+    }
+    public void setMoveThroughCover(boolean moveThroughCover) {
+        this.moveThroughCover = moveThroughCover;
+    }
+
+    public boolean isShrouded() {
+        return shrouded;
+    }
+    public void setShrouded(boolean shrouded) {
+        this.shrouded = shrouded;
+    }
+
+    public boolean isStealth() {
+        return stealth;
+    }
+    public void setStealth(boolean stealth) {
+        this.stealth = stealth;
+    }
+
+    public boolean isBulky() {
+        return bulky;
+    }
+    public void setBulky(boolean bulky) {
+        this.bulky = bulky;
+    }
+
+    public boolean isDaemon() {
+        return daemon;
+    }
+    public void setDaemon(boolean daemon) {
+        this.daemon = daemon;
+    }
+
+    public boolean isRending() {
+        return rending;
+    }
+    public void setRending(boolean rending) {
+        this.rending = rending;
+    }
+
+    public boolean isSwarms() {
+        return swarms;
+    }
+    public void setSwarms(boolean swarms) {
+        this.swarms = swarms;
+    }
+
+    public boolean isRage() {
+        return rage;
+    }
+    public void setRage(boolean rage) {
+        this.rage = rage;
+    }
+
     public boolean isCharacters() {
         return characters;
     }
@@ -283,25 +349,18 @@ public class Model extends SpecialRule{
         this.infantry = infantry;
     }
 
-    public boolean isHq() {
-        return hq;
+    public boolean isBeasts() {
+        return beasts;
     }
-    public void setHq(boolean hq) {
-        this.hq = hq;
-    }
-
-    public boolean isElites() {
-        return elites;
-    }
-    public void setElites(boolean elites) {
-        this.elites = elites;
+    public void setBeasts(boolean beasts) {
+        this.beasts = beasts;
     }
 
-    public boolean isTroops() {
-        return troops;
+    public boolean isEldarJetBikes() {
+        return eldarJetBikes;
     }
-    public void setTroops(boolean troops) {
-        this.troops = troops;
+    public void setEldarJetBikes(boolean eldarJetBikes) {
+        this.eldarJetBikes = eldarJetBikes;
     }
 
     @Override

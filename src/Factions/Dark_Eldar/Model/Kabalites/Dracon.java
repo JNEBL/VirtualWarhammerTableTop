@@ -1,13 +1,13 @@
-package Factions.Dark_Eldar.Model;
+package Factions.Dark_Eldar.Model.Kabalites;
 
 import Factions.Dark_Eldar.Base.DarkEldarModel;
 
 /**
  * Created by jnebl on 4/9/2017.
  */
-public class KabaliteWarriors extends DarkEldarModel {
-    public KabaliteWarriors(){
-        super(4,4,3,3,1,5,1,8,5,"Kabalite Warrior","Kabalite " +
+public class Dracon extends DarkEldarModel {
+    public Dracon(){
+        super(4,4,3,3,1,5,3,9,5,"Dracon","Kabalite " +
                 "Warriors are the poison lifeblood of their Kabal. Each warrior must carve\n" +
                 "out a fearful reputation in the war-torn halls of High Commorragh, proving himself time\n" +
                 "and time again. Even then, only a chosen few enjoy the prestige of raiding the worlds of\n" +
@@ -17,9 +17,10 @@ public class KabaliteWarriors extends DarkEldarModel {
                 "barbs and hooks that penetrate the wearer’s nerve bundles, sharpening his senses withthe constant \n" +
                 "sting of pain. Kabalite Warriors carry a wide array of fiendish weapons,\n" +
                 "predominately long-ranged in nature, for few have the influence to ensure regeneration\n" +
-                "in the lairs of the Haemonculi, and so they prefer to kill from afar.",8);
-        setTroops(true);
+                "in the lairs of the Haemonculi, and so they prefer to kill from afar.",21);
+        setElites(true);
         setInfantry(true);
+        setCharacters(true);
         setFleet(true);
         setPowerFromPain(true);
     }

@@ -4,11 +4,7 @@ package BaseArea;
  * Created by jnebl on 4/9/2017.
  */
 public class SpecialRule {
-    private boolean blind = false,deepStrike = false,fear = false,fleet = false,fleshBane = false,force = false,
-            hitAndRun = false,infiltrate = false,itWillNotDie = false,nightVision = false, missileLock = false,
-            outFlank = false, psyker = false,shred = false,shrouded = false,scout = false,skilledRider = false,
-            slowAndPurposeful = false,splitFire = false,stealth = false, strikeDown = false,stubborn = false,
-            swarms = false,tankHunters = false,vectorDancer = false,vortex = false,zealot = false;
+
     private String name,faction,description;
     public SpecialRule(String name,String description){
         setName(name);
@@ -33,33 +29,5 @@ public class SpecialRule {
     }
     public void setFaction(String faction) {
         this.faction = faction;
-    }
-
-    public boolean isFleet() {
-        return fleet;
-    }
-    public void setFleet(boolean fleet) {
-        this.fleet = fleet;
-    }
-
-    public boolean isFear() {
-        return fear;
-    }
-    public void setFear(boolean fear) {
-        this.fear = fear;
-    }
-
-    public boolean isNightVision() {
-        return nightVision;
-    }
-    public void setNightVision(boolean nightVision) {
-        this.nightVision = nightVision;
-    }
-
-    public boolean isDeepStrike() {
-        return deepStrike;
-    }
-    public void setDeepStrike(boolean deepStrike) {
-        this.deepStrike = deepStrike;
     }
 }

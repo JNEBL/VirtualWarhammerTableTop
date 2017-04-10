@@ -1,13 +1,14 @@
-package Factions.Dark_Eldar.Model;
+package Factions.Dark_Eldar.Model.CourtsOfTheArchon;
 
 import Factions.Dark_Eldar.Base.DarkEldarModel;
+import org.omg.PortableInterceptor.SUCCESSFUL;
 
 /**
  * Created by jnebl on 4/9/2017.
  */
-public class UrGhul extends DarkEldarModel {
-    public UrGhul(){
-        super(4,0,4,3,1,5,3,3,7,"Ur-Ghul","Kabalite lords surround " +
+public class Sslyth extends DarkEldarModel{
+    public Sslyth(){
+        super(4,4,5,5,2,4,3,3,5,"Sslyth","Kabalite lords surround " +
                 "themselves with coteries of favoured retainers, pets and\n" +
                 "bodyguards. From the looming, serpentine mercenaries known as Sslyth to packs of\n" +
                 "drooling, fang-mawed Ur-Ghuls from the haunted pyramids of Shaa-dom, such a\n" +
@@ -17,11 +18,9 @@ public class UrGhul extends DarkEldarModel {
                 "parasitic flesh-sacs bobbing in their wake as their visors spew nauseous anti-light that\n" +
                 "hurls foes into contraempathic comas. Though each member of an Archon’s Court is\n" +
                 "deadly in its own right, it is when these fiends are combined that they become a truly\n" +
-                "deadly instrument of their master’s will.",15);
+                "deadly instrument of their master’s will.",25);
         setInfantry(true);
-        setFear(true);
         setFeelNoPain(true);
         setFleet(true);
-        setFuriousCharge(true);
     }
 }

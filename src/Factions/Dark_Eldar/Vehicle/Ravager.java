@@ -18,6 +18,7 @@ public class Ravager extends DarkEldarVehicle {
                 "ready to attack again elsewhere. In this way enemy strongpoints or tank columns can be\n" +
                 "reduced to smouldering wreckage without the cost of a single Dark Eldar life, the dazed\n" +
                 "survivors left defenceless as the rest of the raiding party descends.",110);
+        setFastAttack(true);
         setSkimmer(true);
         setOpenTopped(true);
         setFast(true);

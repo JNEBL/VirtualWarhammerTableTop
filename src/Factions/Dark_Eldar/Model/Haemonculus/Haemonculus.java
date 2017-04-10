@@ -1,4 +1,4 @@
-package Factions.Dark_Eldar.Model;
+package Factions.Dark_Eldar.Model.Haemonculus;
 
 import Factions.Dark_Eldar.Base.DarkEldarModel;
 

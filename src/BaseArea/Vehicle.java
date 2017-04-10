@@ -5,7 +5,7 @@ import org.omg.CORBA.PUBLIC_MEMBER;
 /**
  * Created by jnebl on 4/9/2017.
  */
-public class Vehicle extends SpecialRule {
+public class Vehicle extends AllModels {
     private int ballisticSkill,armourValueFront,armourValueSides,armourValueRear,hullPoints,points;
     private boolean chariot = false,fast = false,flyer = false,heavy = false,hover = false,openTopped = false
             ,skimmer = false,tank = false,transport = false,walker = false,
