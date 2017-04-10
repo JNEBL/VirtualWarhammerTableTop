@@ -5,7 +5,7 @@ package BaseArea;
  */
 public class SpecialRule {
 
-    private String name,faction,description;
+    private String name,description;
     public SpecialRule(String name,String description){
         setName(name);
         setDescription(description);
@@ -22,12 +22,5 @@ public class SpecialRule {
     }
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getFaction() {
-        return faction;
-    }
-    public void setFaction(String faction) {
-        this.faction = faction;
     }
 }

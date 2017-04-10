@@ -5,11 +5,19 @@ package BaseArea;
  */
 public class AllModels extends SpecialRule {
     private int points;
+    private String faction;
     private boolean deepStrike = false,fear = false,fleet = false,nightVision = false;
     private boolean hq = false,troops = false,elites = false,fastAttack = false,heavySupport = false;
     public AllModels(String name,String description,int points){
         super(name,description);
         setPoints(points);
+    }
+
+    public String getFaction() {
+        return faction;
+    }
+    public void setFaction(String faction) {
+        this.faction = faction;
     }
 
     public int getPoints() {
