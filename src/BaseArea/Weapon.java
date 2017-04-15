@@ -8,7 +8,7 @@ public class Weapon extends SpecialRule{
     private int strengthMultiple,strengthIncrement;
     private boolean melee,twoHanded,dualWield;
     private boolean poisoned2,poisoned4,poisoned5,shred,concussive,lethalDose,instantDeath,specialistWeapon,fleshBane,bladeWhip,
-            rending,impale;
+            rending,impale,ritualPair,snatched;
     public Weapon(int range,int strength,int armourPiercing,String name,String description){
         super(name,description);
         setRange(range);
@@ -164,5 +164,19 @@ public class Weapon extends SpecialRule{
     }
     public void setImpale(boolean impale) {
         this.impale = impale;
+    }
+
+    public boolean isRitualPair() {
+        return ritualPair;
+    }
+    public void setRitualPair(boolean ritualPair) {
+        this.ritualPair = ritualPair;
+    }
+
+    public boolean isSnatched() {
+        return snatched;
+    }
+    public void setSnatched(boolean snatched) {
+        this.snatched = snatched;
     }
 }
