@@ -1,9 +1,12 @@
 package BaseArea;
 
+import java.util.ArrayList;
+
 /**
  * Created by jnebl on 4/6/2017.
  */
 public class Model extends AllModels{
+    ArrayList<Weapon> weapons = new ArrayList<>();
     private int weaponSkill,ballisticSkill,strength,toughness,wound,initiative,attack,leadership,armourSave;
     private boolean feelNoPain = false,furiousCharge = false,rampage = false,independentCharacter = false,dodge = false,
             infiltrate = false,moveThroughCover = false,shrouded = false,stealth = false,bulky = false,daemon = false,
