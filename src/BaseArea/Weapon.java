@@ -6,9 +6,10 @@ package BaseArea;
 public class Weapon extends SpecialRule{
     private int range,strength,armourPiercing;
     private int strengthMultiple,strengthIncrement;
-    private boolean melee,twoHanded,dualWield;
-    private boolean poisoned2,poisoned4,poisoned5,shred,concussive,lethalDose,instantDeath,specialistWeapon,fleshBane,bladeWhip,
-            rending,impale,ritualPair,snatched;
+    private boolean apD6;
+    private boolean melee,twoHanded,dualWield,assault,pistol,heavy,template;
+    private boolean poisoned,shred,concussive,lethalDose,instantDeath,specialistWeapon,fleshBane,bladeWhip,soulBlaze,
+            rending,impale,ritualPair,snatched,lance,blast,haywire,melta,sniper,arcanePayload,oneUseOnly;
     public Weapon(int range,int strength,int armourPiercing,String name,String description){
         super(name,description);
         setRange(range);
@@ -24,6 +25,12 @@ public class Weapon extends SpecialRule{
         setArmourPiercing(armourPiercing);
         this.strengthIncrement = strengthIncrement;
         this.strengthMultiple = strengthMultiple;
+    }
+    public Weapon(int strength,int armourPiercing,String name,String description){
+        super(name,description);
+        setStrength(strength);
+        setArmourPiercing(armourPiercing);
+        setTemplate(true);
     }
 
     public int getRange() {
@@ -61,6 +68,13 @@ public class Weapon extends SpecialRule{
         this.armourPiercing = armourPiercing;
     }
 
+    public boolean isApD6() {
+        return apD6;
+    }
+    public void setApD6(boolean apD6) {
+        this.apD6 = apD6;
+    }
+
     public boolean isMelee() {
         return melee;
     }
@@ -82,25 +96,39 @@ public class Weapon extends SpecialRule{
         this.dualWield = dualWield;
     }
 
-    public boolean isPoisoned2() {
-        return poisoned2;
+    public boolean isAssault() {
+        return assault;
     }
-    public void setPoisoned2(boolean poisoned2) {
-        this.poisoned2 = poisoned2;
-    }
-
-    public boolean isPoisoned4() {
-        return poisoned4;
-    }
-    public void setPoisoned4(boolean poisoned4) {
-        this.poisoned4 = poisoned4;
+    public void setAssault(boolean assault,int number) {
+        this.assault = assault;
     }
 
-    public boolean isPoisoned5() {
-        return poisoned5;
+    public boolean isPistol() {
+        return pistol;
     }
-    public void setPoisoned5(boolean poisoned5) {
-        this.poisoned5 = poisoned5;
+    public void setPistol(boolean pistol) {
+        this.pistol = pistol;
+    }
+
+    public boolean isHeavy() {
+        return heavy;
+    }
+    public void setHeavy(boolean heavy,int number) {
+        this.heavy = heavy;
+    }
+
+    public boolean isTemplate() {
+        return template;
+    }
+    public void setTemplate(boolean template) {
+        this.template = template;
+    }
+
+    public boolean isPoisoned() {
+        return poisoned;
+    }
+    public void setPoisoned(boolean poisoned,int number) {
+        this.poisoned = poisoned;
     }
 
     public boolean isShred() {
@@ -178,5 +206,61 @@ public class Weapon extends SpecialRule{
     }
     public void setSnatched(boolean snatched) {
         this.snatched = snatched;
+    }
+
+    public boolean isSoulBlaze() {
+        return soulBlaze;
+    }
+    public void setSoulBlaze(boolean soulBlaze) {
+        this.soulBlaze = soulBlaze;
+    }
+
+    public boolean isLance() {
+        return lance;
+    }
+    public void setLance(boolean lance) {
+        this.lance = lance;
+    }
+
+    public boolean isBlast() {
+        return blast;
+    }
+    public void setBlast(boolean blast) {
+        this.blast = blast;
+    }
+
+    public boolean isHaywire() {
+        return haywire;
+    }
+    public void setHaywire(boolean haywire) {
+        this.haywire = haywire;
+    }
+
+    public boolean isMelta() {
+        return melta;
+    }
+    public void setMelta(boolean melta) {
+        this.melta = melta;
+    }
+
+    public boolean isSniper() {
+        return sniper;
+    }
+    public void setSniper(boolean sniper) {
+        this.sniper = sniper;
+    }
+
+    public boolean isArcanePayload() {
+        return arcanePayload;
+    }
+    public void setArcanePayload(boolean arcanePayload) {
+        this.arcanePayload = arcanePayload;
+    }
+
+    public boolean isOneUseOnly() {
+        return oneUseOnly;
+    }
+    public void setOneUseOnly(boolean oneUseOnly) {
+        this.oneUseOnly = oneUseOnly;
     }
 }

@@ -40,4 +40,8 @@ public class Dice {
         double number = Math.random() * 360;
         return (int)(number);
     }
+    public static int randomChoice(int size){
+        double number = Math.random() * size;
+        return (int)(number);
+    }
 }
